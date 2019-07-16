@@ -1,0 +1,22 @@
+{
+  "name": "webpack-miniapp",
+  "version": "1.0.0",
+  "description": "a project for miniapp ",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cenkaifeng/webpack-miniapp.git"
+  },
+  "keywords": [
+    ""
+  ],
+  "author": "Jervis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cenkaifeng/webpack-miniapp/issues"
+  },
+  "homepage": "https://github.com/Cenkaifeng/webpack-miniapp#readme"
+}
