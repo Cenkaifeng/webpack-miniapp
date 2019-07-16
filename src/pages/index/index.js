@@ -1,5 +1,7 @@
 //index.js
 //获取应用实例
+const util = require('../../utils/util.js');
+console.log(util.formatTime(new Date()));
 const app = getApp()
 
 Page({
