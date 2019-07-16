@@ -54,6 +54,8 @@ module.exports = {
     }),
 
     new CleanWebpackPlugin({
+      verbose: true,
+      dry: true,
       cleanStaleWebpackAssets: false,
       cleanOnceBeforeBuildPatterns: ['dist']
     }),
@@ -85,3 +87,11 @@ module.exports = {
   mode: debuggable ? 'none' : 'production',
   devtool: debuggable ? 'inline-source-map' : 'source-map'
 }
+/**
+ * TODO: 1打包环境压缩 
+ * 
+ * 2.Ts编译
+ * 
+ * 3.wecos
+ *  
+ * */

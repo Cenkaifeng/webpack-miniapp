@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=dev npm run start",
-    "start": "webpack --watch --progress",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack --watch --progress"
+
   },
   "repository": {
     "type": "git",
