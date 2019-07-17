@@ -11,7 +11,7 @@
 ├─ components		组件
 ├─ css				样式
 ├─ js				js脚本
-├─ libs			    工具类脚本
+├─ utils			工具类脚本
 ├─ wxs			   	存放wxs脚本（小程序的一套脚本语言）
 ├─ pages		    小程序页面
 ├─ service			数据请求

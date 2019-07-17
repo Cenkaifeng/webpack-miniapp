@@ -1,9 +1,9 @@
 const { resolve } = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const MinaWebpackPlugin = require('./build/plugin/MinaWebpackPlugin')
-const HellowPlugin = require('./build/plugin/HellowPlugin')
-const WxRuntimePlugin = require('./build/plugin/WxRuntimePlugin');
+const MinaWebpackPlugin = require('./plugin/MinaWebpackPlugin')
+const HellowPlugin = require('./plugin/HellowPlugin')
+const WxRuntimePlugin = require('./plugin/WxRuntimePlugin');
 
 
 const webpack = require('webpack');
@@ -25,7 +25,7 @@ module.exports = {
             use: 'babel-loader'
         },
         {
-          test: /\.(scss)$/,
+          test: /\.(sc|c|wx)ss$/,
           include: /src/,
           use: [
             {
@@ -87,11 +87,14 @@ module.exports = {
   mode: debuggable ? 'none' : 'production',
   devtool: debuggable ? 'inline-source-map' : 'source-map'
 }
+
+
+
 /**
- * TODO: 1打包环境压缩 
+ * TODO: 1打包环境压缩  dev pro
  * 
  * 2.Ts编译
  * 
- * 3.wecos
+ * 3.oos
  *  
  * */
