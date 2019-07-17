@@ -32,12 +32,6 @@ module.exports = {
           use: [
             'babel-loader',
             {
-              loader: 'mpvue-loader',
-              options: {
-                checkMPEntry: true
-              }
-            },
-            {
               // loader: 'ts-loader',
               loader: 'awesome-typescript-loader',
               options: {
