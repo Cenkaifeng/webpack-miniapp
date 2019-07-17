@@ -22,7 +22,30 @@ module.exports = {
     rules: [
         {
             test:/\.js*/,
+            include: [resolve('src'), resolve('test')],
             use: 'babel-loader'
+        },
+        // ts文件的loader
+        {
+          test: /\.tsx?$/, 
+          exclude: /node_modules/,
+          use: [
+            'babel-loader',
+            {
+              loader: 'mpvue-loader',
+              options: {
+                checkMPEntry: true
+              }
+            },
+            {
+              // loader: 'ts-loader',
+              loader: 'awesome-typescript-loader',
+              options: {
+                // errorsAsWarnings: true,
+                useCache: true,
+              }
+            }
+          ]
         },
         {
           test: /\.(sc|c|wx)ss$/,
@@ -63,7 +86,7 @@ module.exports = {
       {
         from: '**/*',
         to: './',
-        ignore: ['**/*.js','**/*.scss']
+        ignore: ['**/*.js','**/*.scss','**/*.ts']
       },
     ]),
     new MinaWebpackPlugin({
@@ -93,8 +116,7 @@ module.exports = {
 /**
  * TODO: 1打包环境压缩  dev pro
  * 
- * 2.Ts编译
  * 
- * 3.oos
+ * 2.oos
  *  
  * */

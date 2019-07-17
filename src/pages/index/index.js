@@ -1,9 +1,10 @@
 //index.js
 //获取应用实例
 const util = require('../../utils/util.js');
+const test = require('../../utils/test.ts');
 console.log(util.formatTime(new Date()));
 const app = getApp()
-
+test.formatTime(new Date())
 Page({
   data: {
     motto: 'Hello World',
