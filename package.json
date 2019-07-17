@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=dev npm run start",
     "start": "webpack --config build/webpack.base.conf.js --watch --progress ",
-    "rebuild": "webpack --config build/webpack.pro.conf.js -p && gulp minify",
-    "test": "cross-env NODE_ENV=pro npm run rebuild",
+    "pro": "webpack --config build/webpack.pro.conf.js -p && gulp minify",
+    "build": "cross-env NODE_ENV=pro npm run pro",
     "add:page": "node build/wxapp.js --type=page --name",
     "add:component": "node build/wxapp.js --type=component --name"
   },
