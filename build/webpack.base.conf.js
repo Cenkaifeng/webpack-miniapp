@@ -17,7 +17,9 @@ module.exports = {
     filename: '[name].js',
     globalObject: 'wx',//TODO: 后续根据项目环境置换为qq小程序全局对象
   },
-
+  resolve: {
+    extensions: ['.ts', '.js']//TODO: 
+  },
   module: {
     rules: [
         {
@@ -27,20 +29,24 @@ module.exports = {
         },
         // ts文件的loader
         {
-          test: /\.tsx?$/, 
-          exclude: /node_modules/,
-          use: [
-            'babel-loader',
-            {
-              // loader: 'ts-loader',
-              loader: 'awesome-typescript-loader',
-              options: {
-                // errorsAsWarnings: true,
-                useCache: true,
-              }
-            }
-          ]
+          test: /\.ts$/,
+          loader: 'awesome-typescript-loader'
         },
+        // {
+        //   test: /\.tsx?$/, 
+        //   exclude: /node_modules/,
+        //   use: [
+        //     'babel-loader',
+        //     {
+        //       // loader: 'ts-loader',
+        //       loader: 'awesome-typescript-loader',
+        //       options: {
+        //         // errorsAsWarnings: true,
+        //         useCache: true,
+        //       }
+        //     }
+        //   ]
+        // },
         {
           test: /\.(sc|c|wx)ss$/,
           include: /src/,
@@ -84,7 +90,7 @@ module.exports = {
       },
     ]),
     new MinaWebpackPlugin({
-        scriptExtensions: ['.js'],
+        scriptExtensions: ['.js', '.ts'],
         assetExtensions: ['.scss'],
     }),
     new WxRuntimePlugin(),

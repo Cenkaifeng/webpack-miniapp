@@ -50,6 +50,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "@types/node": "^12.6.8",
     "awesome-typescript-loader": "^5.2.1",
     "mini-css-extract-plugin": "^0.8.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",

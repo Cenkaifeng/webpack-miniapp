@@ -1,10 +1,13 @@
 //index.js
 //获取应用实例
-const util = require('../../utils/util.js');
-const test = require('../../utils/test.ts');
+import util = require('../../utils/util.js');
+// import formatTime from '../../utils/test.ts';
+import Clock = require('../../utils/testTT');
+
+console.log(new Clock.default(2,1) );
 console.log(util.formatTime(new Date()));
 const app = getApp()
-test.formatTime(new Date())
+// formatTime(new Date())
 Page({
   data: {
     motto: 'Hello World',
@@ -20,7 +23,7 @@ Page({
   },
   onLoad: function () {
     if (app.globalData.userInfo) {
-      this.setData({
+      this.setData!({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
@@ -28,7 +31,7 @@ Page({
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
-        this.setData({
+        this.setData!({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
@@ -38,9 +41,11 @@ Page({
       wx.getUserInfo({
         success: res => {
           app.globalData.userInfo = res.userInfo
-          this.setData({
+          this.setData!({
             userInfo: res.userInfo,
             hasUserInfo: true
+          },()=>{
+            return true;
           })
         }
       })
@@ -49,7 +54,7 @@ Page({
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
-    this.setData({
+    this.setData!({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
