@@ -18,6 +18,7 @@ module.exports = {
     globalObject: 'wx',//TODO: 后续根据项目环境置换为qq小程序全局对象
   },
   resolve: {
+    modules: ['node_modules'],
     extensions: ['.ts', '.js']//TODO: 
   },
   module: {
@@ -27,26 +28,21 @@ module.exports = {
             include: [resolve('src'), resolve('test')],
             use: 'babel-loader'
         },
-        // ts文件的loader
         {
-          test: /\.ts$/,
-          loader: 'awesome-typescript-loader'
+          test: /\.tsx?$/, 
+          exclude: /node_modules/,
+          use: [
+            'babel-loader',
+            {
+              // loader: 'ts-loader',
+              loader: 'awesome-typescript-loader',
+              options: {
+                // errorsAsWarnings: true,
+                useCache: true,
+              }
+            }
+          ]
         },
-        // {
-        //   test: /\.tsx?$/, 
-        //   exclude: /node_modules/,
-        //   use: [
-        //     'babel-loader',
-        //     {
-        //       // loader: 'ts-loader',
-        //       loader: 'awesome-typescript-loader',
-        //       options: {
-        //         // errorsAsWarnings: true,
-        //         useCache: true,
-        //       }
-        //     }
-        //   ]
-        // },
         {
           test: /\.(sc|c|wx)ss$/,
           include: /src/,

@@ -2,9 +2,9 @@
 //获取应用实例
 import util = require('../../utils/util.js');
 // import formatTime from '../../utils/test.ts';
-import Clock = require('../../utils/testTT');
+import * as testTT from '../../utils/testTT';
 
-console.log(new Clock.default(2,1) );
+console.log(new testTT.Clock(2,1) );
 console.log(util.formatTime(new Date()));
 const app = getApp()
 // formatTime(new Date())

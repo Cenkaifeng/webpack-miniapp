@@ -22,7 +22,7 @@ class AllClock {
 }
 
 
-export default class Clock extends AllClock {
+export class Clock extends AllClock {
     currentTime: Date;
     setTime(d: Date) {
         this.currentTime = d;
