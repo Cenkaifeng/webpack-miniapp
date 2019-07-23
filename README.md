@@ -37,3 +37,4 @@ app.json
 5. npm run add:component -- /ui/dialog [--creator=创建人]               // 创建一个小程序空组件，组件放在src/components/ui/dialog
 
 
+ps: tsconfig.json 中的types 和 typeRoots 配置目前还没有引入node_module的默认@/type 避免编辑器检查重复declare报错

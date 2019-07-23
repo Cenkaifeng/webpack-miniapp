@@ -44,7 +44,7 @@ Page({
           this.setData!({
             userInfo: res.userInfo,
             hasUserInfo: true
-          },()=>{
+          },() => {
             return true;
           })
         }

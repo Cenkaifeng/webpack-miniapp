@@ -19,6 +19,7 @@
     "skipLibCheck": true,
     "strictPropertyInitialization": false,
     "experimentalDecorators": true,
+    "types": ["./typings"],
     "typeRoots": [
       "./typings"
     ]
