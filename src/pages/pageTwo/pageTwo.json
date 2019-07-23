@@ -1,3 +1,6 @@
 {
-	"navigationBarTitleText": "pageTwo"
+	"navigationBarTitleText": "pageTwo",
+	"usingComponents": {
+		"com-test": "../../components/com-test/com-test"
+	}
 }

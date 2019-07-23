@@ -1,6 +1,6 @@
 ## webpack 工程化小程序
 
->   
+>   组件引用，请使用相对当前页面位置
 >   首次加载全局安装gulp
 
 ## 项目结构
@@ -29,9 +29,11 @@ app.json
 
 
 
-#### 构建命令
+### 构建命令
 1. npm run dev     // 编译开发环境
 2. npm run serve   // TODO:[待定] 编译开发环境并自动检测文件变更并实时编译，此功能需先在微信开发者工具设置中打开“保存自动编译小程序”设置
 3. npm run build   // 构建正式环境，构建在项目根目录下的dist文件夹
 4. npm run add:page -- /user/home [--title=页面标题] [--creator=创建人]  // 创建一个小程序空页面，页面放在src/pages/user/home
 5. npm run add:component -- /ui/dialog [--creator=创建人]               // 创建一个小程序空组件，组件放在src/components/ui/dialog
+
+
