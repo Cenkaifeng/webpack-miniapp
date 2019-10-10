@@ -1,6 +1,8 @@
 {
 	"navigationBarTitleText": "pageTwo",
 	"usingComponents": {
-		"com-test": "../../components/com-test/com-test"
+		"com-test": "../../components/com-test/com-test",
+		"com-test-two": "../../components/com-test-two/com-test-two",
+		"com-test-three": "../../components/com-test-three/com-test-three"
 	}
 }

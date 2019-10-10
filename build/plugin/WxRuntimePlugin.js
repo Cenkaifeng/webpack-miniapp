@@ -10,7 +10,7 @@ function isRuntimeExtracted(compilation) {
 }
 
 function script({ dependencies }) {
-  console.log('show dependencies round', dependencies)
+//   console.log('show dependencies round', dependencies)
   return ';' + dependencies.map(file => `require('${requiredPath(file)}');`).join('')
 }
 

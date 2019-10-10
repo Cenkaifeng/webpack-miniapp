@@ -1,1 +1,5 @@
-<view></view>
+<view>
+    <com-test></com-test>
+    <com-test-two></com-test-two>
+    <com-test-three></com-test-three>
+</view>
