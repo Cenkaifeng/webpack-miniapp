@@ -1,7 +1,0 @@
-{
-<<<<<<< HEAD
-    "typescript.tsdk": "node_modules\\typescript\\lib"
-=======
-    "typescript.tsdk": "node_modules/typescript/lib"
->>>>>>> 1dd3a58fb76123eff62a6a6727bf74bd3196b196
-}

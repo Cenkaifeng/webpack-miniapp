@@ -1,14 +1,46 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-    <view class="test-inner">lalalla</view>
-  </view>
+<view class="test-home">
+        <view class="test-home__title">App to mini-program test</view>
+        <view class="test-home__attention">注意：当前页面仅用于测试环境</view>
+        <view class="test-home__attention">Attention：this page is only use to env:test/dev3</view>
+
+        <view class="test-home__content">
+            <view class="test-home__content-title">当前参数：</view>
+            <view>path: {{currentPath}}</view>
+            <view>scene: {{scene}}</view>
+            <view class="tips">场景值(scene)说明：当场景值为以下值时，具备打开app的能力
+                <view>1036(分享卡片)/1069(app)/</view>
+                <view>1038/1089/1090</view>
+            </view>
+            <view>query: {{query}}</view>
+            <view>referrerInfo: {{referrerInfo}}</view>
+            <view>shareTicket: {{shareTicket}}</view>
+            <view>openId: {{openId}}</view>
+            <view>unionId: {{unionId}}</view>
+            <view>sessionKey: {{sessionKey}}</view>
+        </view>
+        <view class="test-home__content">
+            <view class="test-home__content-title">params to app</view>
+            <input value="{{params}}" bindblur="inputEvent" class="input-class" placeholder-class="input-placeholder"></input>
+        </view>
+        <button open-type="launchApp"
+                class="test-home__btn"
+                app-parameter="{{params}}"
+                app-packagename="com.tencent.xxx.live"
+                app-bundleid="com.tencent.xxx"
+                app-connect-id=""
+                binderror="launchAppError">Open App</button>
+
+        <button bind:tap="getOpenId"
+                class="test-home__btn"
+                data-switch="on">Get OpenId</button>
+
+        <button bind:tap="debugSwitch"
+                class="test-home__btn"
+                data-switch="on">Debug on</button>
+
+        <button bind:tap="debugSwitch"
+                class="test-home__btn"
+                data-switch="off">Debug off</button>
+    
 </view>
